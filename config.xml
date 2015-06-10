@@ -44,7 +44,7 @@
 
     <gap:plugin name="org.apache.cordova.inappbrowser" />
     <gap:plugin name="org.apache.cordova.media" />
-    <gap:plugin name="org.apache.cordova.network-infsormation" />
+    <gap:plugin name="org.apache.cordova.network-information" />
     <gap:plugin name="nl.x-services.plugins.socialsharing" source="plugins.cordova.io" />
 
     <feature name="NetworkStatus">
