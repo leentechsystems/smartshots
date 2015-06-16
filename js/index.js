@@ -16,62 +16,36 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+var app = {
+    // Application Constructor
+    initialize: function() {
+        this.bindEvents();
+    },
+    // Bind Event Listeners
+    //
+    // Bind any events that are required on startup. Common events are:
+    // 'load', 'deviceready', 'offline', and 'online'.
+    bindEvents: function() {
+        document.addEventListener('deviceready', this.onDeviceReady, false);
+    },
+    // deviceready Event Handler
+    //
+    // The scope of 'this' is the event. In order to call the 'receivedEvent'
+    // function, we must explicity call 'app.receivedEvent(...);'
+    onDeviceReady: function() {
+        //app.receivedEvent('deviceready');
+        //var networkState = navigator.network.connection.type;
+        window.location = 'http://m.smartshotstudio.com';
+    },
+    // Update DOM on a Received Event
+    receivedEvent: function(id) {
+        var parentElement = document.getElementById(id);
+        var listeningElement = parentElement.querySelector('.listening');
+        var receivedElement = parentElement.querySelector('.received');
 
-// Call onDeviceReady when PhoneGap is loaded.
-//
-// At this point, the document has loaded but phonegap-1.0.0.js has not.
-// When PhoneGap is loaded and talking with the native device,
-// it will call the event `deviceready`.
-//
-document.addEventListener("deviceready", onDeviceReady, false);
-document.addEventListener("offline", onOffline, false);
-document.addEventListener("backbutton", onBackKeyDown, false);
-// PhoneGap is loaded and it is now safe to make calls PhoneGap methods
-//
-function onDeviceReady() {
-    //document.addEventListener("offline", onOffline, false);
-    document.addEventListener("online", onOnline, false);
-}
+        listeningElement.setAttribute('style', 'display:none;');
+        receivedElement.setAttribute('style', 'display:block;');
 
-function onOffline() {
-    // alert('No Internet Connection!');
-    $("body").addClass('reload');
-    $("#loader").addClass('hide');
-    $("#message").removeClass('hide');
-    $("#main_message").text('No Internet Connection');
-    $("#sub_message").text('Tap to Retry');
-    $("#main_message").removeClass('hide');
-    $("#sub_message").removeClass('hide');
-}
-
-function onOnline() {
-    $("body").removeClass('reload');
-    $("#loader").removeClass('hide');
-    $("#message").addClass('hide');
-    $("#main_message").addClass('hide');
-    $("#sub_message").addClass('hide');
-
-     setTimeout(function(){
-            //var ref = window.open('http://m.meiceljewelry.com/', '_blank', 'location=no');
-            var ref = window.location = "http://m.smartshotstudio.com";
-            var temp_url = '';
-            ref.addEventListener('loaderror', function(event) { ref.close(); location.reload(); });
-            ref.addEventListener('loadstart', function(event) { load_url(event.url); });
-     }, 3000);
-}
-
-function load_url(url) {
-    var base_domain = url.substr(0, 26);
-    alert(url);
-    if(base_domain != 'http://m.smartshotstudio.com') {
-        var external = window.open(url, '_system', 'location=no');
-        return true;
+        console.log('Received Event: ' + id);
     }
-    return false;
-}
-$(document).ready(function() {
-    $('body.reload').click(function() {
-        location.reload();
-
-    });
-});
+};
