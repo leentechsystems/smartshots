@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="ph.com.divespot" version="0.0.2" versionCode="34" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>Divespot</name>
+    <name>Smart Shot Studio</name>
     <description>
-        Divespot is an online social media portal intended for divers and for those who are interested in diving and underwater experiences. In Divespot, members have the opportunity to share their experiences by posting blogs, pictures, videos, etc. Members also have the opportunity to update their own profile and view others. This social media community enables them to share and connect with others who are of common interest. It also has a marketplace for the members to buy and sell items related to and necessary for diving.
+        Philippines Wedding Photographer, Philippines Wedding Videographer, International Award Winning Photographer, Smart Shot Studio always seeks to capture the essence of each wedding, which to Lito Genilo is always a challenge. Lito is fascinated with the art of photography since his boyhood. He first tinkered camera some 20 years ago and formal education was introduced during his seminary years,
     </description>
-    <author email="admin@divespot.com.ph" href="http://divespot.com.ph">
-        divespot.com.ph
+    <author email="admin@smartshotstudio.com" href="http://smartshotstudio.com/">
+        admin@smartshotstudio.com
     </author>
 	
     <!-- Android  -->
